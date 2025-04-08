@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  preprocess:
+    cmd: python src/preprocessing.py
+    deps:
+    - path: data/transformed_df.csv
+      hash: md5
+      md5: f81ed886cf556f4359f100d4503ea76e
+      size: 52577234
+    - path: src/preprocessing.py
+      hash: md5
+      md5: 9d338fac40fb13b26955db4aada90e38
+      size: 181
+    outs:
+    - path: data/cleaned.csv
+      hash: md5
+      md5: c9f53a6c1dacefc49b7a31c8fcacba4a
+      size: 51169498
