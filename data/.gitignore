@@ -1,3 +1,5 @@
 /adult.data
 /adult.test
 /transformed_df.csv
+/cleaned.csv
+adult.names
