@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reddit-classifier
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: reddit-classifier
+  template:
+    metadata:
+      labels:
+        app: reddit-classifier
+    spec:
+      containers:
+      - name: reddit-classifier
+        image: gcr.io/lab9gent/reddit-classifier:latest  # Changed to GCR image
+        ports:
+        - containerPort: 8000
+        # Note: Removed resource limits for Autopilot
